@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon backend/server.js && cd frontend && npm run start",
+    "start": "node backend/server.js && cd frontend && npm run start",
     "client": "cd frontend && npm run start",
-    "dev": "concurrently -n 'server,frontend' \"nodemon backend/server.js\" \"npm run client\""
+    "dev": "concurrently -n 'server,frontend' \"node backend/server.js\" \"npm run client\""
   },
   "author": "Shikhar Agrawal",
   "license": "ISC",
