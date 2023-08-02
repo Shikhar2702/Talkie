@@ -129,6 +129,12 @@ function SideDrawer() {
 
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);
+
+      // Remove notification for this chat
+      setNotification(
+        notification.filter((notif) => notif.chat._id !== data._id)
+      );
+
       setLoadingChat(false);
       onClose();
     } catch (error) {

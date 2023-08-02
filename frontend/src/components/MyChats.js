@@ -15,7 +15,15 @@ const MyChats = ({ fetchAgain }) => {
   const { colorMode } = useColorMode();
   const [loggedUser, setLoggedUser] = useState();
 
-  const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState();
+  const {
+    selectedChat,
+    setSelectedChat,
+    user,
+    chats,
+    setChats,
+    notification,
+    setNotification,
+  } = ChatState();
 
   const toast = useToast();
 
@@ -121,7 +129,16 @@ const MyChats = ({ fetchAgain }) => {
               .filter((chat) => chat.users.length >= 2)
               .map((chat) => (
                 <Box
-                  onClick={() => setSelectedChat(chat)}
+                  onClick={() => {
+                    setSelectedChat(chat);
+
+                    // Remove notification for this chat
+                    setNotification(
+                      notification.filter(
+                        (notif) => notif.chat._id !== chat._id
+                      )
+                    );
+                  }}
                   cursor="pointer"
                   bg={
                     colorMode === "light"
