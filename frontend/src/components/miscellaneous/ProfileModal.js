@@ -12,6 +12,7 @@ import {
   Image,
   Avatar,
   Tooltip,
+  VStack,
 } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/react";
 
@@ -40,7 +41,7 @@ const ProfileModal = ({ user, children }) => {
         <ModalOverlay />
         <ModalContent h="410px">
           <ModalHeader
-            fontSize="40px"
+            fontSize={{ base: "24px", md: "36px" }}
             fontfamily="Work sans"
             display="flex"
             textAlign="center"
@@ -51,24 +52,28 @@ const ProfileModal = ({ user, children }) => {
           <ModalCloseButton />
           <ModalBody
             display="flex"
-            flexDir="column"
+            flexDirection="column"
             alignItems="center"
             textAlign="center"
             justifyContent="space-between"
+            p={{ base: 4, md: 8 }}
           >
             <Image
               borderRadius="full"
-              boxSize="150px"
+              boxSize={{ base: "135px", md: "150px" }}
               src={user.pic}
               alt={user.name}
-              mx="auto"
+              mb="auto"
             />
-            <Text
-              fontSize={{ base: "28px", md: "30px" }}
-              fontfamily="Work sans"
-            >
-              ID : {user.email}
-            </Text>
+            <VStack align="center" spacing={{ base: 2, md: 4 }}>
+              <Text
+                fontSize={{ base: "20px", md: "24px" }}
+                fontFamily="Work Sans"
+                flex="column"
+              >
+                ID: {user.email}
+              </Text>
+            </VStack>
           </ModalBody>
           <ModalFooter></ModalFooter>
         </ModalContent>

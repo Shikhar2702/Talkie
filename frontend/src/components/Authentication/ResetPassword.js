@@ -74,7 +74,7 @@ const ResetPassword = () => {
         },
       };
       // console.log(resetToken);
-      const { data } = await axios.put(
+      await axios.put(
         `/api/user/resetpassword/${resetToken}`,
         {
           password,

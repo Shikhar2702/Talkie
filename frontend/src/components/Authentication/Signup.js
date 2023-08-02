@@ -145,7 +145,7 @@ const Signup = () => {
           "Content-type": "application/json",
         },
       };
-      console.log(pic);
+      // console.log(pic);
       const { data } = await axios.post(
         "/api/user",
         {
