@@ -155,10 +155,12 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     <>
       {selectedChat ? (
         <Box
+          justifyContent="center"
           display="flex"
           flexDirection="column"
-          justifyContent="space-between"
+          alignItems="stretch"
           height="100%"
+          width="100%"
         >
           <Text
             fontSize={{ base: "28px", md: "30px" }}
@@ -169,12 +171,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            // bg={colorMode === "light" ? "white" : "#454545"}
             color={colorMode === "light" ? "black" : "white"}
-            // borderRadius="lg"
-            // borderColor={colorMode === "light" ? "black" : "white"}
-            // borderWidth="1.5px"
-            // bg="green"
           >
             <IconButton
               display="flex"

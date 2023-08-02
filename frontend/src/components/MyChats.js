@@ -71,11 +71,9 @@ const MyChats = ({ fetchAgain }) => {
     <Flex
       display={{ base: selectedChat ? "none" : "flex", md: "flex" }}
       className="MyChats"
-      // display="flex"
       flexDir="column"
       alignItems="center"
       p={3}
-      // bg={colorMode === "light" ? "white" : "#454545"}
       color={colorMode === "light" ? "black" : "white"}
       w={{ base: "100%", md: "31%" }}
       borderRadius="lg"
@@ -88,7 +86,6 @@ const MyChats = ({ fetchAgain }) => {
         display="flex"
         width="100%"
         alignItems="center"
-        // bg={colorMode === "light" ? "white" : "#454545"}
         color={colorMode === "light" ? "black" : "white"}
       >
         <span style={{ flex: 1 }}>My Chats</span>

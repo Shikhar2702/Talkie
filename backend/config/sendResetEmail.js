@@ -6,8 +6,8 @@ const sendResetEmail = async (email, resetToken) => {
     port: 587,
     secure: false,
     auth: {
-      user: process.env.Email,
-      pass: process.env.Email_Password,
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASSWORD,
     },
   });
 
