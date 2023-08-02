@@ -11,7 +11,7 @@ const sendResetEmail = async (email, resetToken) => {
     },
   });
 
-  const resetLink = `http://localhost:3000/resetpassword/${resetToken}`;
+  const resetLink = `https://talkie-tfic.onrender.com/resetpassword/${resetToken}`;
 
   const mailOptions = {
     from: "talkieteam27@gmail.com",

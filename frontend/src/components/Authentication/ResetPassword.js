@@ -73,7 +73,7 @@ const ResetPassword = () => {
           "Content-type": "application/json",
         },
       };
-      console.log(resetToken);
+      // console.log(resetToken);
       const { data } = await axios.put(
         `/api/user/resetpassword/${resetToken}`,
         {
