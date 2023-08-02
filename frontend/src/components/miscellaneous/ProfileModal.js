@@ -42,7 +42,7 @@ const ProfileModal = ({ user, children }) => {
           <ModalHeader
             fontSize="40px"
             fontfamily="Work sans"
-            d="flex"
+            display="flex"
             textAlign="center"
             justifyContent="center"
           >
@@ -50,7 +50,7 @@ const ProfileModal = ({ user, children }) => {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody
-            d="flex"
+            display="flex"
             flexDir="column"
             alignItems="center"
             textAlign="center"

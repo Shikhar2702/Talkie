@@ -26,7 +26,8 @@ const HomePage = () => {
       >
         <Box
           display="flex"
-          justifyItems="center"
+          flexDirection="column"
+          alignItems={{ base: "center", md: "flex-start" }}
           p={3}
           w="100%"
           m="20px 0 5px 0"
@@ -36,7 +37,12 @@ const HomePage = () => {
           className="boxWithBackground"
           opacity="0.8"
         >
-          <Text fontSize="4xl" fontfamiy="Lato" color="black" m="0 0 0 220px">
+          <Text
+            fontSize="4xl"
+            fontfamiy="Lato"
+            color="black"
+            m={{ base: "10px 0", md: "0 0 0 220px" }}
+          >
             Talkie
           </Text>
         </Box>
