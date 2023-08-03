@@ -157,11 +157,11 @@ const MyChats = ({ fetchAgain }) => {
                   key={chat._id}
                 >
                   <Text>
-                    {!chat.isGroupChat
+                    {!chat.isGroupChat && getSender(loggedUser, chat.users)
                       ? getSender(loggedUser, chat.users)
                       : chat.chatName}
                   </Text>
-                  {chat.latestMessage && (
+                  {chat.latestMessage && chat.latestMessage.sender && (
                     <Text fontSize="xs">
                       <b>{chat.latestMessage.sender.name} : </b>
                       {chat.latestMessage.content.length > 50

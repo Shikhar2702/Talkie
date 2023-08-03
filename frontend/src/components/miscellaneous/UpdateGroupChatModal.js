@@ -209,8 +209,6 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
     setGroupChatName("");
   };
 
-  // ... (previous code)
-
   const handleDeleteGroup = async () => {
     if (selectedChat.groupAdmin._id !== user._id) {
       toast({
