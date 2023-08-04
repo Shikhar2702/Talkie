@@ -40,6 +40,7 @@ import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
 import DeleteConfirmationModal from "./DeleteConfirmationModal";
+import Talkie from "../../bgpics/Logo.png";
 
 function SideDrawer() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -209,8 +210,26 @@ function SideDrawer() {
             </Text>
           </Button>
         </Tooltip>
-        <Text fontSize="2xl" fontfamily="Work sans">
+        <Text fontSize="2xl" fontfamily="Work sans" display="flex">
           Talkie
+          <Text
+            m="5px 0 0 6px"
+            bg="#F7FD04"
+            borderRadius="full"
+            width="30px"
+            height="30px"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <img
+              src={Talkie}
+              height="18px"
+              width="36px"
+              borderRadius="full"
+              alt="Talkie Image"
+            ></img>
+          </Text>
         </Text>
         <Center display="flex" alignItems="center">
           {colorMode === "light" ? (
