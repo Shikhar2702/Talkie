@@ -24,7 +24,10 @@ function DeleteConfirmationModal({ isOpen, onClose, onDelete }) {
       <ModalContent>
         <ModalHeader>Confirm Deletion</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>Are you sure you want to delete the user?</ModalBody>
+        <ModalBody>
+          Are you sure you want to delete the user from database?
+          <br /> Please do not delete Guest user, as it is a public id !!
+        </ModalBody>
         <ModalFooter>
           <Button colorScheme="red" mr={3} onClick={handleDelete}>
             Delete
