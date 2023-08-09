@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ChatPageWrapper from "./pages/ChatPageWrapper";
 import ForgotPassword from "./components/Authentication/ForgotPassword";
 import ResetPassword from "./components/Authentication/ResetPassword.js";
+import About from "./components/miscellaneous/About";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             component={ResetPassword}
             className="PassChange"
           />
+          <Route path="/about" component={About} className="About" />
         </Switch>
       </div>
     </BrowserRouter>

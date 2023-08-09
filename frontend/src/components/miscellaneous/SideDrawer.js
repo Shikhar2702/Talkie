@@ -7,6 +7,7 @@ import {
   useColorMode,
   Center,
   Switch,
+  Link,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
@@ -41,9 +42,11 @@ import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
 import DeleteConfirmationModal from "./DeleteConfirmationModal";
 import Talkie from "../../bgpics/Logo.png";
+import About from "./About";
 
 function SideDrawer() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const [openAbout, setOpenAbout] = useState(false);
 
   const {
     isOpen: isConfirmOpen,
@@ -214,7 +217,7 @@ function SideDrawer() {
           Talkie
           <Text
             m="5px 0 0 6px"
-            bg="#F7FD04"
+            bg="white"
             borderRadius="full"
             width="30px"
             height="30px"
@@ -320,6 +323,11 @@ function SideDrawer() {
                 onClose={handleConfirmClose}
                 onDelete={deleteUserHandler}
               />
+              <MenuItem>
+                <Button colorScheme="blue">
+                  <a href="/about">About Talkie</a>
+                </Button>
+              </MenuItem>
             </MenuList>
           </Menu>
         </Center>
